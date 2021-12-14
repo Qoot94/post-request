@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             call?.enqueue(object : Callback<recipeItem> {
                 override fun onResponse(call: Call<recipeItem>, response: Response<recipeItem>) {
                     try {
-                        Toast.makeText(applicationContext, "User added to api",LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, "User added to api", LENGTH_SHORT).show()
                         location.text.clear()
                         name.text.clear()
                     } catch (e: Exception) {
