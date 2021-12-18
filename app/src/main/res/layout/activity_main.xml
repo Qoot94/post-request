@@ -8,13 +8,15 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="#28484670"
         android:orientation="horizontal"
         android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -34,6 +36,7 @@
                 android:background="@android:drawable/button_onoff_indicator_on"
                 android:backgroundTint="#31FEFEFF"
                 android:ems="10"
+                android:fontFamily="@font/comfortaa_light"
                 android:hint="your name..."
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
@@ -54,6 +57,7 @@
                 android:background="@android:drawable/button_onoff_indicator_off"
                 android:backgroundTint="#31FEFEFF"
                 android:ems="10"
+                android:fontFamily="@font/comfortaa_light"
                 android:hint="Location e.g :Alhasa, SA"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
@@ -70,6 +74,29 @@
             android:pointerIcon="context_menu"
             app:srcCompat="@android:drawable/divider_horizontal_dark"
             tools:ignore="SpeakableTextPresentCheck" />
+
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMain"
+        android:layout_width="330dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabGoTo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/ic_sharp_edit_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

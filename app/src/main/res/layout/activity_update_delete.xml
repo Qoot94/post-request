@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".UpdateDeleteActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_baseline_chat_bubble_24"
+        android:backgroundTint="#FFF59D"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/comfortaa_light"
+            android:paddingBottom="20dp"
+            android:text="Update: enter pk and name or location \n Delete: enter pk only"
+            android:textSize="16sp"
+            app:autoSizeTextType="uniform" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="100dp"
+        android:background="@android:drawable/progress_horizontal"
+        android:backgroundTint="#6B1486AC"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/dialog_frame" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:paddingLeft="5dp">
+
+            <EditText
+                android:id="@+id/etPK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@android:drawable/button_onoff_indicator_on"
+                android:backgroundTint="#31FEFEFF"
+                android:ems="10"
+                android:fontFamily="@font/comfortaa_light"
+                android:hint="pk.."
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etUpdatedName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@android:drawable/button_onoff_indicator_on"
+                android:backgroundTint="#31FEFEFF"
+                android:ems="10"
+                android:fontFamily="@font/comfortaa_light"
+                android:hint="your name..."
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/etUpdatedLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@android:drawable/button_onoff_indicator_on"
+                android:backgroundTint="#31FEFEFF"
+                android:ems="10"
+                android:fontFamily="@font/comfortaa_light"
+                android:hint="Location e.g :Alhasa, SA"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="22dp"
+            android:background="#40547D"
+            android:backgroundTintMode="screen"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <ImageButton
+                android:id="@+id/ibUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_sharp_edit_24"
+                android:backgroundTint="#FCF7EA"
+                android:pointerIcon="context_menu"
+                app:srcCompat="@android:drawable/divider_horizontal_dark"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/ibDel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/ic_sharp_delete_24"
+                android:backgroundTint="#FBF7EB"
+                android:pointerIcon="context_menu"
+                app:srcCompat="@android:drawable/divider_horizontal_dark"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btHelp"
+        android:layout_width="57dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:drawable/ic_menu_info_details"
+        android:backgroundTint="#FFD54F"
+        android:fontFamily="@font/comfortaa"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
